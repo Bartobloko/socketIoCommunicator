@@ -4,7 +4,7 @@
             <h2 class="d-flex justify-content-center">Username</h2>
         </div>
         <form [formGroup]="userNameForm" class="d-flex justify-content-center">
-            <input type="text" formControlName="username" name="username" id="username">
+            <input type="text" formControlName="username" name="username" id="username" autocomplete="off">
         </form>
         <div class="d-flex justify-content-center"><button (click)="saveUser()">Save</button></div>
     </div>
