@@ -21,19 +21,18 @@ export class UsernamePopupComponent {
     username: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-      Validators.pattern(/^[a-zA-Z0-9]+(\s[a-zA-Z0-9]+)*$/)
+     Validators.pattern(/^[a-zA-Z0-9]+(?:\s[a-zA-Z0-9]+)*$/)
     ]),
   })
 
 
   saveUser() {
     if(this.userNameForm.valid) {
-      console.log('jestem walidacyjny :D')
       this.socket.emit('addUser', this.userNameForm.value)
       this.socket.on('userCreated',(message:any) => {
         this.loginService.setLoginData(this.userNameForm.value);
       }) 
-    }
+    } 
   }
 
 }

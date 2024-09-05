@@ -10,13 +10,16 @@ export class FindSecondUserOfRoomService {
 
   constructor(
     private loginService: LoginService
-  ) {
-    this.loginService.loginData$.subscribe((data) => {
-      this.loginData = data?.username;
-    });   
+  ) { 
    }
 
   findSecondParticipantName(room: Room) {
-    return room.participants.find(participant => participant !== this.loginData)
+    this.loginService.loginData$.subscribe((data) => {
+      this.loginData = data?.username;
+    });  
+    if (room && room.participants) {
+      return room.participants.find(participant => participant !== this.loginData)
+    } 
+    return null
   }
 }

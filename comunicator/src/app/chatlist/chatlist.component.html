@@ -16,14 +16,14 @@
                 </svg>
             </span>
             <form [formGroup]="searchForm">
-                <input type="text" placeholder="Szukaj konwersacji" formControlName="searchTerm" />
+                <input type="text" placeholder="Search..." formControlName="searchTerm" />
             </form>
         </label>
     </div>
     <div class="chatList">
         @if(search) {
             @if(users.length == 1){
-               <div class="noClick">Brak aktywnych uzytkownikow</div> 
+               <div class="noClick">No users active</div> 
             }
             @for (user of fliteredUsers(); track $index) {
                 @if(user.username !== loginData) {

@@ -41,7 +41,9 @@ export class ChatlistComponent {
     });   
     
     this.socket.on('rooms', (rooms: Room[]) => {
-      this.rooms = rooms.filter(rooms => rooms.participants.includes(this.loginData));
+      if(rooms) {
+        this.rooms = rooms.filter(rooms => rooms.participants.includes(this.loginData));
+      }
     })
     
   }
