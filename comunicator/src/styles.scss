@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'roboto-fontface/css/roboto/roboto-fontface.css';
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+app-root {
+    display: flex;
+    height: 100%;
+    background: #242526;
+    color: white;
+    overflow: hidden;
+}
+
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
+
+}
+button:hover {
+    cursor: pointer;
+}
+

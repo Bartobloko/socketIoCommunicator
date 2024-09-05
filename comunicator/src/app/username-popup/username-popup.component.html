@@ -1,0 +1,11 @@
+<div class="popupMode">
+    <div class="popupWindow">
+        <div class="popupHeader d-flex justify-content-center">
+            <h2 class="d-flex justify-content-center">Username</h2>
+        </div>
+        <form [formGroup]="userNameForm" class="d-flex justify-content-center">
+            <input type="text" formControlName="username" name="username" id="username">
+        </form>
+        <div class="d-flex justify-content-center"><button (click)="saveUser()">Zapisz</button></div>
+    </div>
+</div>

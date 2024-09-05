@@ -1,0 +1,85 @@
+::placeholder {
+    color: white;
+    opacity: 1; 
+  }
+
+.sideBarMenu {
+    border-top: 1px solid #494747;;
+    border-right: 1px solid #494747;;
+    height: 100%;
+    width: 100%;
+    >.header {
+        height: 10%;
+        position: relative;
+        >h1 {
+            margin: 0;
+        }
+        >button {
+            position: absolute;
+            right: 0;
+            background: #494747;
+            color: white;
+            margin-right: 5px;
+            border: none;
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;  
+            height: 35%;
+            font-size: large;
+            &:hover {
+                background: #4d4a4a;
+
+            }
+        }
+    }
+    >.userInput {
+        height: 5%;
+        text-align: center;
+        >label {
+            display: flex;
+            justify-content: space-evenly;
+            background: #494747;
+            margin: 0 5%;
+            width: 90%;
+            border-radius: 20px;
+            padding: 7px 0;
+            >span {
+                width: 15%;
+            }
+            >form{
+                width: 80%;
+                > input {
+                    width: 100%;
+                    border-radius: 20px;
+                    background: #494747;
+                    color: white;
+                    border: none
+                }
+                > input:focus {
+                    outline: none;
+                }
+            } 
+        }
+    }
+
+    >.chatList {
+        height: 85%;
+        overflow-y: auto;
+        scrollbar-color: gray #333536;
+        >div {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            background: #555353;
+            margin: 15px 10px;
+        }
+        >div:hover {
+            cursor: pointer;
+            background: #474646;
+
+        }
+        >.noClick:hover {
+            background: #555353;
+            cursor:default;
+        }
+    }
+}
