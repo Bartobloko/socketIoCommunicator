@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "comunicator": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "pl":"./src/locale/messages.pl.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": ["pl"],
             "outputPath": "dist/comunicator",
             "index": "src/index.html",
             "browser": "src/main.ts",

@@ -1,10 +1,10 @@
 <div  class="sideBarMenu">
     <div class="header d-flex align-items-center justify-content-center">
         @if(!search) {
-            <h1>Chats</h1>
+            <h1 i18n>Chats</h1>
             <button (click)="downloadUsers()">+</button>
         }@else {
-            <h1>Invite</h1>
+            <h1 i18n>Invite</h1>
             <button (click)="search=false">&larr;</button>
         }
     </div>
@@ -16,14 +16,14 @@
                 </svg>
             </span>
             <form [formGroup]="searchForm">
-                <input type="text" placeholder="Search..." formControlName="searchTerm" />
+                <input type="text" placeholder="Search..." formControlName="searchTerm" i18n-placeholder />
             </form>
         </label>
     </div>
     <div class="chatList">
         @if(search) {
             @if(users.length == 1){
-               <div class="noClick">No users active</div> 
+               <div class="noClick" i18n>No users active</div> 
             }
             @for (user of fliteredUsers(); track $index) {
                 @if(user.username !== loginData) {

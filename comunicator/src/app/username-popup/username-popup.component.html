@@ -1,11 +1,11 @@
 <div class="popupMode">
     <div class="popupWindow">
         <div class="popupHeader d-flex justify-content-center">
-            <h2 class="d-flex justify-content-center">Username</h2>
+            <h2 class="d-flex justify-content-center" i18n>Username</h2>
         </div>
-        <form [formGroup]="userNameForm" class="d-flex justify-content-center">
+        <form [formGroup]="userNameForm" class="d-flex justify-content-center" (keydown.enter)="saveUser()">
             <input type="text" formControlName="username" name="username" id="username" autocomplete="off">
         </form>
-        <div class="d-flex justify-content-center"><button (click)="saveUser()">Save</button></div>
+        <div class="d-flex justify-content-center"><button (click)="saveUser()" i18n>Save</button></div>
     </div>
 </div>
