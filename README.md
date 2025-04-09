@@ -7,5 +7,3 @@
 - **Node.js**
 - **Socket.IO**
 - **Angular Localize**
-
-## How it looks when its running:
